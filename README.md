@@ -51,3 +51,7 @@ PowerShell alternative:
 ## Upload limits
 - Max 50MB per report file
 - Max 200MB total per upload
+
+## GitHub Pages
+After GitHub Actions deploys, the site should be available at:
+`https://bigdez55.github.io/SOAE-Dashboard/`
