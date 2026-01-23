@@ -35,6 +35,19 @@ Notes:
 - Windows requires WebView2 runtime; most managed PCs already have it.
 - Some corporate policies block running EXEs from USB devices.
 
+## Copy to USB (Windows)
+After building, you can copy the Windows EXE to `E:\SOAE`:
+
+```bat
+scripts\copy-to-usb.cmd
+```
+
+PowerShell alternative:
+
+```powershell
+.\scripts\copy-to-usb.ps1
+```
+
 ## Upload limits
 - Max 50MB per report file
 - Max 200MB total per upload
