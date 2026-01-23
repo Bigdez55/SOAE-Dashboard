@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.DS_Store
+
+# Local data exports
+*.csv
+*.xlsx
+*.eml
+
+# Installers and toolchains
+*.exe
+
+# Tauri build output
+src-tauri/target/
