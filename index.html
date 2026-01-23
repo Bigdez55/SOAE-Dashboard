@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SOAE Compliance Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">SOAE Compliance Dashboard</p>
+        <h1>Report Compliance Tracker</h1>
+        <p class="subheading">
+          Track reporting obligations directly from a flash drive with automatic
+          status updates.
+        </p>
+      </div>
+      <div class="summary" id="summary"></div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Add a compliance item</h2>
+        <form id="item-form" class="form-grid">
+          <label>
+            Report name
+            <input type="text" name="title" required placeholder="Quarterly ESG report" />
+          </label>
+          <label>
+            Owner
+            <input type="text" name="owner" required placeholder="Compliance team" />
+          </label>
+          <label>
+            Due date
+            <input type="date" name="dueDate" required />
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="completed" />
+            Completed
+          </label>
+          <label>
+            Notes
+            <textarea name="notes" rows="3" placeholder="Add follow-ups or links"></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit">Add item</button>
+            <button type="reset" class="secondary">Clear</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="table-header">
+          <h2>Compliance items</h2>
+          <div class="filter">
+            <label for="status-filter">Filter</label>
+            <select id="status-filter">
+              <option value="all">All</option>
+              <option value="open">Open</option>
+              <option value="overdue">Overdue</option>
+              <option value="complete">Complete</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Report</th>
+                <th>Owner</th>
+                <th>Due date</th>
+                <th>Status</th>
+                <th>Notes</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="items-body"></tbody>
+          </table>
+          <p class="empty-state" id="empty-state">
+            No compliance items yet. Add your first entry above.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Data stays on this device using local storage. Export by copying the
+        folder to another drive.
+      </p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
