@@ -369,12 +369,27 @@ function normalizeRecord(datasetKey, record) {
 
   if (datasetKey === 'soae') {
     if ((normalized.hoursToCreate === null || normalized.hoursToCreate === undefined) &&
-      normalized.date && normalized.createdTime) {
-      normalized.hoursToCreate = calculateHoursDiff(normalized.date, normalized.createdTime);
+      (normalized.eventDateTime || normalized.date) && normalized.createdTime) {
+      normalized.hoursToCreate = calculateHoursDiff(
+        normalized.eventDateTime || normalized.date,
+        normalized.createdTime
+      );
     }
 
     if (!normalized.timeliness && normalized.hoursToCreate !== null && normalized.hoursToCreate !== undefined) {
       normalized.timeliness = normalized.hoursToCreate > DEFAULT_CONFIG.onTimeHours ? 'Late' : 'On time';
+    }
+
+    if (normalized.timeliness === 'Late' && (normalized.ld === null || normalized.ld === undefined)) {
+      normalized.ld = calculateLdForLate(normalized.hoursToCreate, DEFAULT_CONFIG);
+    }
+  } else {
+    if (normalized.missing && normalized.date) {
+      normalized.daysOverdue = calculateDaysOverdue(normalized.date);
+    }
+
+    if (normalized.missing && (normalized.ld === null || normalized.ld === undefined)) {
+      normalized.ld = calculateLdForMissing(normalized.daysOverdue, DEFAULT_CONFIG);
     }
   }
 
@@ -405,6 +420,55 @@ function isMeaningfulValue(value) {
   return true;
 }
 
+function formatDateParts(yearValue, monthValue, dayValue) {
+  const year = normalizeYear(yearValue);
+  const month = String(monthValue).padStart(2, '0');
+  const day = String(dayValue).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function normalizeYear(value) {
+  const str = String(value);
+  if (str.length === 2) {
+    return `20${str}`;
+  }
+  return str;
+}
+
+function parseDateParts(value) {
+  if (!value) return null;
+  const trimmed = String(value).trim();
+  const iso = trimmed.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (iso) {
+    return { year: Number(iso[1]), month: Number(iso[2]), day: Number(iso[3]) };
+  }
+  const slash = trimmed.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+  if (slash) {
+    return {
+      year: Number(normalizeYear(slash[3])),
+      month: Number(slash[1]),
+      day: Number(slash[2])
+    };
+  }
+  const dash = trimmed.match(/^(\d{1,2})-(\d{1,2})-(\d{2,4})/);
+  if (dash) {
+    return {
+      year: Number(normalizeYear(dash[3])),
+      month: Number(dash[1]),
+      day: Number(dash[2])
+    };
+  }
+  return null;
+}
+
+function to24Hour(hour, meridiem) {
+  let h = Number(hour);
+  const mer = String(meridiem || '').toUpperCase();
+  if (mer === 'PM' && h < 12) h += 12;
+  if (mer === 'AM' && h === 12) h = 0;
+  return h;
+}
+
 function getSafetyDatasetKey(record) {
   const flag = String(record.accidentClass || '').trim().toLowerCase();
   if (flag === 'incident' || flag === 'incidents') {
@@ -426,6 +490,9 @@ function normalizeDateFields(record) {
   if (record.date) {
     record.date = normalizeDate(record.date);
   }
+  if (record.eventDateTime) {
+    record.eventDateTime = normalizeDateTime(record.eventDateTime);
+  }
   if (record.createdTime) {
     record.createdTime = normalizeDateTime(record.createdTime);
   }
@@ -435,25 +502,48 @@ function normalizeDateFields(record) {
 function normalizeDate(value) {
   if (!value) return value;
   const trimmed = String(value).trim();
-  if (/^\d{4}-\d{2}-\d{2}T/.test(trimmed)) {
-    return trimmed.slice(0, 10);
-  }
+  const isoMatch = trimmed.match(/^(\d{4}-\d{2}-\d{2})T/);
+  if (isoMatch) return isoMatch[1];
   if (/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) return trimmed;
   if (/^\d{4}\/\d{2}\/\d{2}$/.test(trimmed)) return trimmed.replace(/\//g, '-');
-  const parsed = new Date(trimmed);
-  if (!Number.isNaN(parsed.getTime())) {
-    return parsed.toISOString().slice(0, 10);
+
+  const slash = trimmed.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+  if (slash) {
+    return formatDateParts(slash[3], slash[1], slash[2]);
   }
+
+  const dash = trimmed.match(/^(\d{1,2})-(\d{1,2})-(\d{2,4})/);
+  if (dash) {
+    return formatDateParts(dash[3], dash[1], dash[2]);
+  }
+
   return trimmed;
 }
 
 function normalizeDateTime(value) {
   if (!value) return value;
-  const parsed = new Date(value);
-  if (!Number.isNaN(parsed.getTime())) {
-    return parsed.toISOString();
+  const trimmed = String(value).trim();
+  if (/^\d{4}-\d{2}-\d{2}T/.test(trimmed)) {
+    const parsed = new Date(trimmed);
+    return Number.isNaN(parsed.getTime()) ? trimmed : parsed.toISOString();
   }
-  return value;
+
+  const match = trimmed.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})\s+(\d{1,2}):(\d{2})(?::(\d{2}))?\s*(AM|PM)?/i);
+  if (match) {
+    const [, month, day, year, hour, minute, second, meridiem] = match;
+    const hour24 = to24Hour(Number(hour), meridiem);
+    const dateObj = new Date(
+      Number(normalizeYear(year)),
+      Number(month) - 1,
+      Number(day),
+      hour24,
+      Number(minute),
+      Number(second || 0)
+    );
+    return Number.isNaN(dateObj.getTime()) ? trimmed : dateObj.toISOString();
+  }
+
+  return trimmed;
 }
 
 function calculateHoursDiff(dateValue, createdValue) {
@@ -463,6 +553,31 @@ function calculateHoursDiff(dateValue, createdValue) {
     return null;
   }
   return (createdDate.getTime() - eventDate.getTime()) / (1000 * 60 * 60);
+}
+
+function calculateDaysOverdue(dateValue) {
+  if (!dateValue) return null;
+  const dateParts = parseDateParts(dateValue);
+  if (!dateParts) return null;
+  const eventDate = new Date(dateParts.year, dateParts.month - 1, dateParts.day);
+  const today = new Date();
+  const todayMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const diff = Math.floor((todayMidnight.getTime() - eventDate.getTime()) / (1000 * 60 * 60 * 24));
+  return diff < 0 ? 0 : diff;
+}
+
+function calculateLdForLate(hoursLate, config) {
+  if (hoursLate === null || hoursLate === undefined) return null;
+  const excessHours = Math.max(0, hoursLate - (config.onTimeHours || 24));
+  if (excessHours <= 0) return 0;
+  const daysLate = Math.ceil(excessHours / 24);
+  return (config.ldBase || 0) + daysLate * (config.ldPerDay || 0);
+}
+
+function calculateLdForMissing(daysOverdue, config) {
+  if (daysOverdue === null || daysOverdue === undefined) return null;
+  if (daysOverdue <= 0) return 0;
+  return (config.ldBase || 0) + daysOverdue * (config.ldPerDay || 0);
 }
 
 function toNumber(value) {
@@ -490,8 +605,9 @@ function mapRecordFields(record) {
   });
 
   const aliases = {
-    id: ['id', 'title'],
+    id: ['id', 'title', 'soae id#', 'soae id'],
     date: ['date', 'eventdate', 'event date', 'entry date'],
+    eventDateTime: ['eventdate', 'event date'],
     eventType: ['eventtype', 'event type'],
     category: ['category', 'eventtype', 'event type', 'accident type', 'type of accident'],
     incidentType: ['incidenttype', 'incident type', 'accident type', 'type of accident'],
