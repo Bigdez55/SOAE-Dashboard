@@ -188,6 +188,10 @@ export function updateConfig(newConfig) {
  */
 export async function loadCsvFiles(files) {
   const fileList = Array.from(files || []);
+  const sizeResult = validateReportSizes(fileList);
+  if (sizeResult.error) {
+    throw new Error(sizeResult.error);
+  }
   const datasets = {
     soae: [],
     dispatch: [],
@@ -527,6 +531,30 @@ function mapRecordFields(record) {
 function getFileExtension(filename) {
   const parts = filename.toLowerCase().split('.');
   return parts.length > 1 ? parts[parts.length - 1] : '';
+}
+
+function validateReportSizes(files) {
+  const maxTotalBytes = 200 * 1024 * 1024;
+  const maxFileBytes = 50 * 1024 * 1024;
+  let total = 0;
+
+  for (const file of files) {
+    const size = Number(file?.size || 0);
+    if (size > maxFileBytes) {
+      return {
+        error: `File too large: ${file.name}. Max per file is ${Math.floor(maxFileBytes / (1024 * 1024))}MB.`
+      };
+    }
+    total += size;
+  }
+
+  if (total > maxTotalBytes) {
+    return {
+      error: `Total upload size too large. Max total is ${Math.floor(maxTotalBytes / (1024 * 1024))}MB.`
+    };
+  }
+
+  return { error: null };
 }
 
 async function parseXlsxFile(file) {

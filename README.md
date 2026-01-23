@@ -16,12 +16,6 @@ Report Compliance Tracker
 - Safety Tracker XLSX is routed to Accidents by default and split into Incidents when the `ACCIDENT` column is `Incident/INCIDENT`.
 - The `ACCIDENT` flag and `P / NP - Risk Perspective` values are surfaced in the Sources tab category column.
 
-## Portable flash drive use (Option 1)
-1) Run `npm run build` to generate `dist/`.
-2) Copy the project folder (or at least `dist/` and `scripts/portable-server.js`) to the flash drive.
-3) On the target machine, run `npm run portable:serve`.
-4) Open `http://localhost:4173` in a browser.
-
 ## Double-click app (portable desktop)
 This uses Tauri to create a native app you can run from a flash drive.
 
@@ -40,3 +34,7 @@ Outputs (typical):
 Notes:
 - Windows requires WebView2 runtime; most managed PCs already have it.
 - Some corporate policies block running EXEs from USB devices.
+
+## Upload limits
+- Max 50MB per report file
+- Max 200MB total per upload
