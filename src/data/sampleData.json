@@ -1,0 +1,97 @@
+{
+  "generated": "2026-01-08 00:00:00",
+  "config": {
+    "onTimeHours": 24,
+    "ldBase": 5000,
+    "ldPerDay": 100,
+    "redFlagCategories": [
+      "Veh- Collision w/ Damage",
+      "Veh- Collision w/o Damage",
+      "Incident- Passenger fall (no injury)",
+      "Incident- Emergency Services Called",
+      "Safety -Bio Event",
+      "Veh- Bus Break Down"
+    ],
+    "reviewCategories": [
+      "Taxi Issues",
+      "Misc.",
+      "Misc- Lost and Found"
+    ],
+    "reportableCategories": [
+      "Incident Report",
+      "Veh- Mechanical Failure",
+      "Veh- Bus Break Down",
+      "Veh-Tablet Issue",
+      "Veh- Collision w/ Damage",
+      "Veh- Collision w/o Damage",
+      "Incident- Passenger fall (no injury)",
+      "Incident- Emergency Services Called",
+      "Safety -Bio Event",
+      "Veh- AC Failure",
+      "System- Tablet Issues"
+    ]
+  },
+  "filters": {
+    "months": ["2025-10", "2025-11", "2025-12", "2026-01"],
+    "dates": [],
+    "eventTypes": [
+      "Assault (Non-Physical)",
+      "Assault (Physical)",
+      "Bio-Hazard",
+      "Client/PCA Injury",
+      "Collision",
+      "Disorderly",
+      "Employee Injury",
+      "Fire",
+      "Fueling",
+      "Hygiene",
+      "Mechanical Issue",
+      "Minor Damage/Scratch",
+      "Mobility Device",
+      "Pedestrian Injury",
+      "Security",
+      "Service Issues",
+      "Tablet Issue"
+    ],
+    "vehicles": [],
+    "sources": ["SOAE", "Dispatch", "Safety Incidents", "Safety Accidents", "Downed List"]
+  },
+  "metrics": {
+    "soae": {
+      "total": 0,
+      "onTime": 0,
+      "late": 0,
+      "onTimePct": 0,
+      "avgHoursToCreate": 0
+    },
+    "ld": {
+      "total": 0,
+      "fromLate": 0,
+      "fromMissing": 0,
+      "dailyBurn": 0
+    },
+    "sources": {
+      "dispatch": { "total": 0, "matched": 0, "missing": 0, "pct": 0 },
+      "downed": { "total": 0, "matched": 0, "missing": 0, "pct": 0 },
+      "incidents": { "total": 0, "matched": 0, "missing": 0, "pct": 0 },
+      "accidents": { "total": 0, "matched": 0, "missing": 0, "pct": 0 }
+    },
+    "actionItems": {
+      "lateSoae": 0,
+      "missingTotal": 0,
+      "missingLate": 0,
+      "needsReview": 0
+    }
+  },
+  "data": {
+    "soae": [],
+    "dispatch": [],
+    "incidents": [],
+    "accidents": [],
+    "downed": []
+  },
+  "trends": {
+    "daily": [],
+    "monthly": []
+  }
+}
