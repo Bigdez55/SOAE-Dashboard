@@ -1,0 +1,34 @@
+last_updated: '2026-05-16'
+scan_dir: 25_automation
+total: 15
+automations:
+- name: generate_mermaid_atlas
+  path: 25_automation/diagram_generators/generate_mermaid_atlas.py
+- name: generate_readme_from_manifest
+  path: 25_automation/doc_generators/generate_readme_from_manifest.py
+- name: check_diagram_drift
+  path: 25_automation/drift_checkers/check_diagram_drift.py
+- name: check_registry_drift
+  path: 25_automation/drift_checkers/check_registry_drift.py
+- name: check_skill_drift
+  path: 25_automation/drift_checkers/check_skill_drift.py
+- name: check_traceability_drift
+  path: 25_automation/drift_checkers/check_traceability_drift.py
+- name: check_truth_drift
+  path: 25_automation/drift_checkers/check_truth_drift.py
+- name: build_knowledge_mesh
+  path: 25_automation/graph_builders/build_knowledge_mesh.py
+- name: build_proof_matrix
+  path: 25_automation/proof_matrix/build_proof_matrix.py
+- name: sync_registries
+  path: 25_automation/registry_sync/sync_registries.py
+- name: evaluate_skill
+  path: 25_automation/skill_evaluators/evaluate_skill.py
+- name: create_repo_twin
+  path: 25_automation/sync_scripts/create_repo_twin.py
+- name: sync_to_child_repo
+  path: 25_automation/sync_scripts/sync_to_child_repo.py
+- name: onboarding_validate_tiers
+  path: 25_automation/onboarding_validate_tiers.py
+- name: harvest_claude_universal
+  path: 25_automation/sync_scripts/harvest_claude_universal.py

@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Skill",
+  "description": "Validates a skill definition document in the Development_Skills knowledge base.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "version", "layer", "domains", "playbook", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^SKILL_[A-Z_]+_\\d{3}$",
+      "description": "Unique skill identifier in the form SKILL_<DOMAIN>_NNN"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "layer": {
+      "type": "string",
+      "description": "Architectural layer this skill operates in (e.g. core, application, integration)"
+    },
+    "domains": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "playbook": {
+      "type": "string",
+      "description": "Relative path to the associated command playbook file"
+    },
+    "validation_tests": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "improvement_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "deprecated", "experimental"]
+    }
+  }
+}
