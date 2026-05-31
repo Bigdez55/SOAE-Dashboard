@@ -20,20 +20,20 @@ Per tier; see [SKILL_REPO_ONBOARDING_001.playbook.md](../../13_skills/active/SKI
 - Repo structure check passes ([apex_structure_check.yml](../../.github/workflows/apex_structure_check.yml))
 - `python3 25_automation/registry_sync/sync_registries.py --check` is green
 - `target` is a git repository on a clean branch
-- `target/development_skills/` exists (sync via [25_automation/sync_scripts/sync_to_child_repo.py](../../25_automation/sync_scripts/sync_to_child_repo.py) first if missing)
+- `target/atlas/` exists (sync via [25_automation/sync_scripts/sync_to_child_repo.py](../../25_automation/sync_scripts/sync_to_child_repo.py) first if missing)
 
 ## Fast Validation Runner
 
 Run this portable validator from any repo to audit tier completion:
 
 ```bash
-python3 development_skills/25_automation/onboarding_validate_tiers.py --target /absolute/path/to/repo --tiers 1-4
+python3 atlas/25_automation/onboarding_validate_tiers.py --target /absolute/path/to/repo --tiers 1-4
 ```
 
 For JSON output:
 
 ```bash
-python3 development_skills/25_automation/onboarding_validate_tiers.py --target /absolute/path/to/repo --tiers 1-4 --json
+python3 atlas/25_automation/onboarding_validate_tiers.py --target /absolute/path/to/repo --tiers 1-4 --json
 ```
 
 ## Step-by-step
@@ -52,7 +52,7 @@ For each tier in the expanded list, follow its body literally as written in [SKI
 **Tier 1 note:** T1 begins with a mandatory discovery protocol — read git history, language artifacts, source structure, deployment signals, and any existing docs *before* writing any output file. Do not prompt the user for context about what the repo does; derive it mechanically. The reality model built during discovery is the sole input to all T1 artifacts.
 
 ### 4. Update registries
-- Inside the target: `python3 development_skills/25_automation/registry_sync/sync_registries.py --write`.
+- Inside the target: `python3 atlas/25_automation/registry_sync/sync_registries.py --write`.
 - For T1 step 5 (twin population): run `python3 25_automation/registry_sync/sync_registries.py --write` in the upstream ATLAS checkout on the dedicated onboarding branch.
 
 ### 5. Update traceability
@@ -70,7 +70,7 @@ For each tier in the expanded list, follow its body literally as written in [SKI
 - T4 → mistake ledger entries; only generates an evidence packet when a skill is promoted.
 
 ## Outputs
-See "Output" section above. All outputs land in canonical locations inside the target's `development_skills/` (T1, T2, T3) and in upstream ATLAS for the twin (T1) and any promoted skills (T4).
+See "Output" section above. All outputs land in canonical locations inside the target's `atlas/` (T1, T2, T3) and in upstream ATLAS for the twin (T1) and any promoted skills (T4).
 
 ## Success criteria
 - Required artifacts for the requested tier exist on disk and validate against schema.

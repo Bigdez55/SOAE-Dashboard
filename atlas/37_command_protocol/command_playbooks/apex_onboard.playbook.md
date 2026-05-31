@@ -12,9 +12,9 @@ Per tier; see [SKILL_REPO_ONBOARDING_001.playbook.md](../../13_skills/active/SKI
 - T4 → drift report (per session), mistake ledger entries, promoted skill improvements, refreshed twin and truth state when warranted.
 
 ## Inputs
-- `tier` (required): a single tier (`1`, `2`, `3`, or `4`) **or** a range (`1-4`, `1-2`, `2-4`, etc.) to run multiple tiers in sequence.
+- `tier` (integer, required): `1`, `2`, `3`, or `4`.
 - `target` (string, required): absolute path to the child repo on disk.
-- `intent_brief` (string, **required when Tier 2 is included**): 1–3 sentence statement of what the repo is for and the next outcome it must achieve. Must come from the caller; the command does not fabricate it.
+- `intent_brief` (string, **required for Tier 2 only**): 1–3 sentence statement of what the repo is for and the next outcome it must achieve. Must come from the caller; the command does not fabricate it.
 
 ## Preconditions
 - Repo structure check passes ([apex_structure_check.yml](../../.github/workflows/apex_structure_check.yml))
@@ -39,17 +39,15 @@ python3 atlas/25_automation/onboarding_validate_tiers.py --target /absolute/path
 ## Step-by-step
 
 ### 1. Validate inputs
-- Parse `tier`: accept a single integer (`1`–`4`) or a dash-range (`1-4`, `2-3`, etc.). Expand to an ordered list of tiers to run, e.g. `1-4` → `[1, 2, 3, 4]`.
+- `tier` is one of `1|2|3|4`.
 - `target` is an absolute path that exists and is a git repository.
-- If the list includes Tier 2 and `intent_brief` is empty, halt immediately before running any tier and surface the requirement to the caller.
+- If `tier == 2`, `intent_brief` is non-empty. If missing, halt and surface to the caller.
 
 ### 2. Load context
 Compile a context packet via [42_context_compiler/compile_context.py](../../42_context_compiler/compile_context.py) for the appropriate persona ([12_agents/personas/](../../12_agents/personas/)) — typically `apex_coding_agent` for T1/T2/T3 and `drift_agent` for T4.
 
-### 3. Execute each tier in sequence
-For each tier in the expanded list, follow its body literally as written in [SKILL_REPO_ONBOARDING_001.playbook.md](../../13_skills/active/SKILL_REPO_ONBOARDING_001.playbook.md). Complete every step of a tier and confirm its outputs exist before starting the next tier. Do not skip steps.
-
-**Tier 1 note:** T1 begins with a mandatory discovery protocol — read git history, language artifacts, source structure, deployment signals, and any existing docs *before* writing any output file. Do not prompt the user for context about what the repo does; derive it mechanically. The reality model built during discovery is the sole input to all T1 artifacts.
+### 3. Execute the matching tier
+Follow the tier body literally as written in [SKILL_REPO_ONBOARDING_001.playbook.md](../../13_skills/active/SKILL_REPO_ONBOARDING_001.playbook.md). Each tier produces a defined set of artifacts; do not skip steps.
 
 ### 4. Update registries
 - Inside the target: `python3 atlas/25_automation/registry_sync/sync_registries.py --write`.
@@ -101,16 +99,8 @@ See "Output" section above. All outputs land in canonical locations inside the t
 ## Example invocation
 
 ```text
-# Run all four tiers end-to-end (T2 requires intent_brief)
-/apex:onboard tier=1-4 target=/absolute/path/to/LMOS intent_brief="LMOS is a legal matter operations system; next outcome is a pilot intake → matter-creation flow with audit-trail evidence."
-
-# Run only T1 (discovery — no intent_brief needed)
 /apex:onboard tier=1 target=/absolute/path/to/LMOS
-
-# Run T1 then T2 together
-/apex:onboard tier=1-2 target=/absolute/path/to/LMOS intent_brief="LMOS is a legal matter operations system; next outcome is a pilot intake → matter-creation flow with audit-trail evidence."
-
-# Run a single subsequent tier
+/apex:onboard tier=2 target=/absolute/path/to/LMOS intent_brief="LMOS is a legal matter operations system; next outcome is a pilot intake → matter-creation flow with audit-trail evidence."
 /apex:onboard tier=3 target=/absolute/path/to/LMOS
 /apex:onboard tier=4 target=/absolute/path/to/LMOS
 ```
