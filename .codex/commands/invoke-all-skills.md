@@ -16,7 +16,7 @@ Do not interpret this as "call every skill in Claude's registered Skill tool lis
 Interpret it as:
 
 ```text
-Apply the Development_Skills universal skill coverage matrix and selected repository-native playbooks.
+Apply the ATLAS universal skill coverage matrix and selected repository-native playbooks.
 ```
 
 Also use:
@@ -71,4 +71,4 @@ Report:
 
 ## Forbidden Response Pattern
 
-Do not say "only the registered Skill tool list counts" or ask the user to manually name every `SKILL_*` playbook. That is a runtime limitation, not the Development_Skills canon.
+Do not say "only the registered Skill tool list counts" or ask the user to manually name every `SKILL_*` playbook. That is a runtime limitation, not the ATLAS canon.

@@ -1,8 +1,8 @@
-# Development_Skills Agent Instructions
+# ATLAS Agent Instructions
 
 ## Cross-Runtime Skill Invocation
 
-When the user says `invoke all skills`, `use all skills`, `run all skills`, `activate all skills`, `all skills now`, or `all skills and agents`, apply the repository-native Development_Skills all-skills policy.
+When the user says `invoke all skills`, `use all skills`, `run all skills`, `activate all skills`, `all skills now`, or `all skills and agents`, apply the repository-native ATLAS all-skills policy.
 
 Required behavior:
 
