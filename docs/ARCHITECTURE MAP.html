@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SOAE-Dashboard — ARCHITECTURE MAP</title>
+<style>
+:root{--bg:#0e1116;--panel:#161b22;--panel2:#1c2230;--line:#2a3240;--tx:#d6dde6;--mut:#8b97a7;--acc:#58a6ff;}
+*{box-sizing:border-box}body{margin:0;font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--tx)}
+header{padding:26px 32px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#11161e,#0e1116)}
+header h1{margin:0 0 4px;font-size:23px} header .meta{color:var(--mut);font-size:13px}
+.bigfind{margin:12px 0 0;border-radius:6px;padding:10px 13px;font-size:12.5px;line-height:1.55;max-width:1040px;background:#1a1410;border:1px solid #6b4a1f;border-left:3px solid #e67e22}
+main{padding:24px 32px;max-width:1040px}
+section{margin:0 0 26px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+section h2{margin:0 0 10px;font-size:18px} .sub{color:var(--mut);margin:0 0 12px;font-size:13px}
+.diagbox{background:#0c0f14;border:1px solid var(--line);border-radius:8px;padding:14px;overflow:auto;font-family:ui-monospace,Menlo,monospace;font-size:12px;white-space:pre;color:var(--tx);line-height:1.45}
+table{border-collapse:collapse;width:100%;font-size:13px;margin-top:6px}
+td,th{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top} th{background:var(--panel2);color:var(--mut)}
+code{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--acc);background:#0c0f14;border:1px solid var(--line);border-radius:4px;padding:0 4px}
+.chip{font-size:11px;border:1px solid;border-radius:5px;padding:1px 7px;font-weight:600}
+.ok{background:#2ecc711a;border-color:#2ecc71;color:#2ecc71}.warn{background:#f1c40f1a;border-color:#f1c40f;color:#f1c40f}.gap{background:#e67e221a;border-color:#e67e22;color:#e67e22}.scaf{background:#e67e221a;border-color:#e67e22;color:#e67e22}
+ul{margin:6px 0 0;padding-left:18px} li{margin:0 0 6px;line-height:1.5}
+</style>
+</head>
+<body>
+<header>
+<h1>SOAE-Dashboard — ARCHITECTURE MAP</h1>
+<div class="meta">Generated 2026-06-20 · /Users/desmondearly/Developer/SOAE-Dashboard · reconnaissance map (read-only; nothing built or executed)</div>
+<div class="bigfind"><strong>Honest headline:</strong> This is a <strong>real, working single-page React dashboard</strong> — the "VTA Paratransit SOAE Compliance Dashboard" — not a scaffold. ~37 first-party code files (~5,218 LOC of app code) form a fully wired chain: <code>main.jsx</code> → <code>App.jsx</code> → hooks (<code>useDashboardData</code>, <code>useFilters</code>) → <code>dataService.js</code> (CSV/XLSX/EML parsing + LD-penalty math) → 10 tab views rendering Recharts. It boots <em>empty by design</em> ("No data loaded") until you click "Load Reports"; data lives entirely client-side. The vast bulk of the tree is vendored agent tooling — <code>atlas/</code> (28&nbsp;MB / 3,308 files), <code>.claude/</code> &amp; <code>.codex/</code> (5.6&nbsp;MB each) — which has nothing to do with the app and dwarfs it. Real defects found (reported, not fixed): a double-escaped regex breaks EML date/subject extraction; the <code>lint</code> script can't run (eslint isn't installed); SharePoint/API data paths are dormant TODO stubs; <code>src/data/sampleData.json</code> is orphaned; there are no tests.</div>
+</header>
+<main>
+
+<section>
+<h2>1 · System architecture</h2>
+<p class="sub">Client-only React SPA (Vite build). Two delivery targets: static GitHub Pages site and a Tauri desktop app. No server, no DB — all parsing/aggregation runs in the browser; uploaded files never leave the machine.</p>
+<div class="diagbox">
+                          ┌─────────────────────────────────────────────┐
+                          │  USER browser  (GitHub Pages  OR  Tauri app) │
+                          └───────────────────────┬─────────────────────┘
+                                                  │ loads
+                                  index.html → src/main.jsx (React 18 root)
+                                                  │
+                                                  ▼
+   ┌──────────────────────────────────────  src/App.jsx  ──────────────────────────────────────┐
+   │  TABS[10] · activeTab state · loadWarnings · renders Header / Nav / Filter / tabpanel       │
+   └───────────┬───────────────────────────────────────────────────────────┬───────────────────┘
+               │ uses                                                       │ uses
+               ▼                                                            ▼
+   ┌─ useDashboardData ─────────────────┐                  ┌─ useFilters(data) ───────────────────┐
+   │ data/loading/error/lastRefresh     │                  │ filters{date,type,source,status,...} │
+   │ loadFromFiles() · refresh()        │                  │ filteredData + stats (LD totals,     │
+   │ getDashboardData() on mount        │                  │ on-time %, missing, needsReview)     │
+   └───────────┬────────────────────────┘                  └──────────────────┬───────────────────┘
+               │ calls                                                         │ props {data,stats,config,filters,trends}
+               ▼                                                               ▼
+   ┌─ services/dataService.js  (797 LOC, the engine) ──┐        ┌─ components/tabs/ (10 views) ───────────┐
+   │ loadCsvFiles(files)  ← Header "Load Reports"      │        │ Executive · SOAE · LDBreakdown · Sources│
+   │   ├ parseCsvText / csvRowsToObjects (utils/csv)   │        │ Dispatch · ActionQueues · Intelligence  │
+   │   ├ parseXlsxFile (dynamic import 'xlsx')         │        │ Trends · DataQuality · Export           │
+   │   ├ parseDownedEmail (.eml)  ⚠ regex bug          │        │   render via Recharts + lucide icons    │
+   │   ├ mapRecordFields (header aliasing)             │        └─────────────────────────────────────────┘
+   │   ├ normalize dates / hoursToCreate / daysOverdue │
+   │   └ LD math: $5,000 + $100/day (calculateLd*)     │        components/common/ : KPICard, DataTable,
+   │ getDashboardData(): mode='csv' ⇒ EMPTY on mount   │        MetricRow, StatusBadge, SectionHeader,
+   │ fetchFromApi / fetchFromSharePoint : DORMANT stub │        CollapsibleSection
+   └───────────────────────────────────────────────────┘        components/layout/ : Header, Navigation,
+                                                                 MobileNav, Container(Card/Grid/Section),
+   DELIVERY                                                      FilterPanel
+   ├ vite.config.js  base=process.env.BASE                ⇄  .github/workflows/deploy.yml (BASE=/SOAE-Dashboard/)
+   └ src-tauri/  (Rust shell: main.rs 7 LOC, tauri.conf.json) → app/dmg/msi/nsis bundles
+
+   VENDORED (NOT app code, excluded from counts):
+     atlas/ 28MB·3308 files   .claude/ 5.6MB   .codex/ 5.6MB   .git/ 7.5MB
+</div>
+</section>
+
+<section>
+<h2>2 · Stack &amp; contents</h2>
+<p class="sub">Real source = 37 first-party code files (23 .jsx + 12 .js + 2 .rs). Of the 12 .js, three are build-config (<code>vite.config.js</code>, <code>tailwind.config.js</code>, <code>postcss.config.js</code>) → 34 app-only modules. ~5,218 LOC across app code.</p>
+<table>
+<tr><th>Area</th><th>Tech / files</th><th>Notes</th></tr>
+<tr><td>Framework</td><td>React 18.2 + Vite 5</td><td>SPA; entry <code>src/main.jsx</code> → <code>App.jsx</code> (StrictMode)</td></tr>
+<tr><td>UI / charts</td><td>Tailwind 3.3, lucide-react 0.294, recharts 2.10</td><td>10 tab views; mobile + desktop nav; a11y skip-link &amp; roles present</td></tr>
+<tr><td>Data ingest</td><td><code>services/dataService.js</code> (797 LOC) + <code>utils/csv.js</code> + <code>xlsx</code> 0.18 (dynamic import)</td><td>CSV / XLSX / EML; filename→dataset routing + header auto-detect; SharePoint <code>ListSchema=</code> row strip</td></tr>
+<tr><td>State</td><td>Two hooks (<code>useDashboardData</code>, <code>useFilters</code>)</td><td>No Redux/Zustand; <code>useMemo</code> filter+stats engine; client-only, no persistence</td></tr>
+<tr><td>Domain logic</td><td>LD penalties ($5k base + $100/day), 24h on-time rule</td><td>In <code>dataService.js</code> (<code>calculateLdForLate/Missing</code>, <code>calculateDaysOverdue</code>) + <code>useFilters</code> stats</td></tr>
+<tr><td>Desktop</td><td>Tauri 1.5 (<code>src-tauri/</code>, Rust)</td><td><code>main.rs</code> is a 7-line default shell; bundles app/dmg/msi/nsis; CSP locked, allowlist all=false</td></tr>
+<tr><td>Deploy</td><td>GitHub Actions → Pages (<code>deploy.yml</code>)</td><td>Builds with <code>BASE=/SOAE-Dashboard/</code>; target URL bigdez55.github.io/SOAE-Dashboard/</td></tr>
+<tr><td>Tooling</td><td>scripts/copy-to-usb.{cmd,ps1}</td><td>Windows USB-copy helpers for the built EXE</td></tr>
+<tr><td>Tests / lint</td><td>none / <code>lint</code> script broken</td><td>No test files; <code>npm run lint</code> calls eslint but eslint is not a dependency and no config exists</td></tr>
+<tr><td>Vendored (excluded)</td><td><code>atlas/</code> 28MB·3308 files, <code>.claude/</code> &amp; <code>.codex/</code> 5.6MB each, <code>.git/</code> 7.5MB</td><td>Agent/skill tooling; ~99% of file count; unrelated to the app</td></tr>
+</table>
+</section>
+
+<section>
+<h2>3 · Spec ↔ Build reconciliation</h2>
+<p class="sub">README.md / index.html claims vs. what the code actually does. Evidence cited inline.</p>
+<table>
+<tr><th>Spec claim</th><th>Status</th><th>Evidence / reality</th></tr>
+<tr><td>"Load Reports" button uploads CSV/XLSX/EML</td><td><span class="chip ok">BUILT</span></td><td><code>Header.jsx:67</code> <code>accept=".csv,.xlsx,.eml" multiple</code> → <code>loadFromFiles</code> → <code>dataService.loadCsvFiles</code></td></tr>
+<tr><td>Filename→dataset routing (soae/dispatch/incident/accident/safety/down) + header auto-detect</td><td><span class="chip ok">BUILT</span></td><td><code>getDatasetKeyFromFilename</code> (264) &amp; <code>getDatasetKeyFromHeaders</code> (273)</td></tr>
+<tr><td>SharePoint <code>ListSchema=</code> first-row ignored</td><td><span class="chip ok">BUILT</span></td><td><code>stripSchemaRow</code> (480)</td></tr>
+<tr><td>Safety XLSX → Accidents, split to Incidents on <code>ACCIDENT</code> col</td><td><span class="chip ok">BUILT</span></td><td><code>getSafetyDatasetKey</code> (472) + accidents branch (246)</td></tr>
+<tr><td>EML "Downed/Unfueled Vehicles" parsing</td><td><span class="chip warn">PARTIAL</span></td><td>Section + line-item parse works (<code>parseDownedEmail</code> 727, <code>/^\d+/</code> 751), BUT subject &amp; date extraction is broken by a double-escaped regex (730, 784) — records load <strong>without dates</strong>. See F-1.</td></tr>
+<tr><td>LD math: $5,000 + $100/day; 24h on-time</td><td><span class="chip ok">BUILT</span></td><td><code>calculateLdForLate</code> (569), <code>calculateLdForMissing</code> (577), <code>onTimeHours:24</code></td></tr>
+<tr><td>Upload limits 50 MB/file, 200 MB total</td><td><span class="chip ok">BUILT</span></td><td><code>validateReportSizes</code> (652)</td></tr>
+<tr><td>10 dashboard tabs (Exec…Export) + CSV/JSON export</td><td><span class="chip ok">BUILT</span></td><td>All 10 in <code>tabs/</code> (180–273 LOC each), wired in <code>App.jsx</code>; <code>ExportTab</code> builds Blob downloads</td></tr>
+<tr><td>Tauri "double-click portable app" (macOS/Windows)</td><td><span class="chip warn">UNVERIFIED</span></td><td>Config + 7-line <code>main.rs</code> present &amp; coherent; <strong>not built/executed here</strong> (recon is read-only). Plausible.</td></tr>
+<tr><td>GitHub Pages deploy at /SOAE-Dashboard/</td><td><span class="chip ok">BUILT</span></td><td>base-path chain wired: <code>vite.config.js</code> <code>base=process.env.BASE</code> ← <code>deploy.yml</code> <code>BASE:/SOAE-Dashboard/</code> ← README URL</td></tr>
+<tr><td>SharePoint / REST API data source ("can be added later")</td><td><span class="chip scaf">SCAFFOLD</span></td><td>PRESENT-BUT-NOT-WIRED: <code>mode:'csv'</code> hardcoded ⇒ <code>getDashboardData</code> always returns empty; <code>transformSharePointData</code>/<code>calculateMetrics</code>/<code>groupDataBySource</code> are TODO placeholders returning <code>{}</code>. README hedges "for now / later" — possibly intentional. See F-2.</td></tr>
+<tr><td><code>npm run lint</code></td><td><span class="chip gap">NO-TESTS</span></td><td>Script references eslint but eslint is NOT in devDependencies and no config file exists → fails at command-not-found. No unit/integration tests anywhere. See F-3.</td></tr>
+</table>
+</section>
+
+<section>
+<h2>4 · Findings <span class="sub" style="font-size:12px">(reported, not fixed)</span></h2>
+<ul>
+<li><strong>F-1 · EML date/subject regex is double-escaped (real bug).</strong> In <code>dataService.js</code>, line 730 <code>text.match(/Subject:\\s*(.*)/i)</code> and line 784 <code>subject.match(/(\\d{1,2})[\\/-](\\d{1,2})[\\/-](\\d{2,4})/)</code> use literal double-backslashes inside JS regex <em>literals</em>. So <code>\\s</code>/<code>\\d</code>/<code>[\\/-]</code> match a literal backslash char, not whitespace/digit/separator. Effect: the Subject line never matches → <code>extractDateFromSubject</code> receives empty input → every downed-vehicle EML record is created with <code>date: null</code> (and thus no <code>yearMonth</code>, dropping out of month filters). Both lines are defective; 784 is additionally masked because 730 already empties the subject. Confirmed via verbatim Read + grep. <em>Fix would be single backslashes — flagged for the coding agent, not changed here.</em></li>
+<li><strong>F-2 · SharePoint &amp; REST-API data paths are dormant placeholder stubs (PRESENT-BUT-NOT-WIRED).</strong> <code>DATA_CONFIG.mode</code> is hardcoded <code>'csv'</code>, so <code>getDashboardData()</code> always hits the <code>default</code> branch and returns empty data; <code>fetchFromApi</code>/<code>fetchFromSharePoint</code> are never reached, and <code>transformSharePointData</code>, <code>calculateMetrics</code>, <code>groupDataBySource</code>, <code>calculateTrends</code> are TODO placeholders returning <code>{}</code>/empty. README frames these as future ("for now / can be added later"), so this is <em>possibly intentional pre-implementation</em> — confirm intent. It means the app is strictly upload-driven.</li>
+<li><strong>F-3 · <code>lint</code> script is non-functional + zero tests.</strong> <code>package.json</code> defines <code>"lint": "eslint . …"</code> but <code>eslint</code> is absent from <code>devDependencies</code> and there is no <code>.eslintrc*</code>/<code>eslint.config.*</code>; <code>npm run lint</code> fails at command-not-found. No <code>*.test.*</code>/<code>*.spec.*</code> exist (the only "test" hits are vendored agent <code>.md</code> files under <code>.claude/.codex</code>). No CI quality gate beyond the Pages build.</li>
+<li><strong>F-4 · <code>src/data/sampleData.json</code> is orphaned (dead fixture).</strong> 2.3 KB file, grep shows zero imports/references anywhere in <code>src/</code>. Leftover sample/seed data; the app boots from <code>getEmptyData()</code>, not this file. Harmless but misleading.</li>
+<li><strong>F-5 · App boots to an empty dashboard with no demo data.</strong> On mount <code>getDashboardData()</code> returns empty and <code>dataSource</code> shows "No data loaded". This is by design (CSV-first, privacy-preserving), but the consequence is the <strong>deployed GitHub Pages site renders an empty dashboard</strong> for any visitor until they upload files — worth confirming that's the intended public behavior (vs. shipping a seeded demo, e.g. wiring the orphaned <code>sampleData.json</code>).</li>
+<li><strong>F-6 · Dead formatter exports.</strong> <code>utils/formatters.js</code> exports <code>truncateText</code> and <code>formatDateShort</code>; grep shows neither is imported anywhere. Minor dead code.</li>
+<li><strong>F-7 · Vendored bulk dominates the tree (honesty note, not a defect).</strong> <code>atlas/</code> (28 MB / 3,308 files) plus <code>.claude/</code> &amp; <code>.codex/</code> (5.6 MB each) account for ~99% of the file count against ~5,218 LOC of real app code. These are imported agent-tooling bundles, unrelated to the dashboard; raw file counts of this repo will badly overstate its size. (<code>atlas/</code> is committed, not gitignored.)</li>
+<li><strong>F-8 · <code>build:portable</code> is identical to <code>build</code>.</strong> Both scripts are just <code>vite build</code>; "portable" in the README refers to the separate Tauri path (<code>tauri:build</code>). The extra script name implies a distinct portable web build that doesn't exist — low impact, naming clarity only.</li>
+</ul>
+<p class="sub" style="margin-top:14px">Reconnaissance only — observations for the coding agent's checklist + your oversight, not changes. Companion register: <a href="SPEC_VS_BUILD_DISCREPANCIES.md">SPEC_VS_BUILD_DISCREPANCIES.md</a>.</p>
+</section>
+
+</main>
+</body>
+</html>
