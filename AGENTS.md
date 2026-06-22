@@ -1,27 +1,63 @@
-# ATLAS Agent Instructions
+# ATLAS Thin Tether — Agent Instructions
+
+This repo is tethered to ATLAS via `atlas_tether.py`. All skill resolution,
+routing, and context compilation go through the Bookworm ABI at
+`$ATLAS_HOME/infrastructure/scripts/atlas_tether.py` — **in-process, no HTTP**.
+
+## Thin Tether Contract
+
+- **ATLAS_HOME**: `/Users/desmondearly/Developer/ATLAS` (see `.atlas/tether.yaml`)
+- **Tether CLI**: `python3 /Users/desmondearly/Developer/ATLAS/infrastructure/scripts/atlas_tether.py <subcommand>`
+- The vendored `atlas/`, `.claude/universal/`, `.codex/universal/` corpus has been
+  purged or was never present. All knowledge is resolved live from ATLAS_HOME.
+
+## Skill Resolution
+
+```bash
+python3 /Users/desmondearly/Developer/ATLAS/infrastructure/scripts/atlas_tether.py resolve-skill REFACTOR
+python3 /Users/desmondearly/Developer/ATLAS/infrastructure/scripts/atlas_tether.py resolve-skill ADR --full
+```
+
+## Routing
+
+```bash
+python3 /Users/desmondearly/Developer/ATLAS/infrastructure/scripts/atlas_tether.py route "audit the repo"
+```
+
+## Context Compilation
+
+```bash
+python3 /Users/desmondearly/Developer/ATLAS/infrastructure/scripts/atlas_tether.py compile-context --scope full --task "implement feature X"
+```
+
+## Knowledge Search
+
+```bash
+python3 /Users/desmondearly/Developer/ATLAS/infrastructure/scripts/atlas_tether.py ask "skill routing strategies"
+```
 
 ## Cross-Runtime Skill Invocation
 
-When the user says `invoke all skills`, `use all skills`, `run all skills`, `activate all skills`, `all skills now`, or `all skills and agents`, apply the repository-native ATLAS all-skills policy.
+When the user says `invoke all skills`, `use all skills`, or `activate all skills`,
+route through `atlas_tether.py route` which binds the canonical trigger router
+at `$ATLAS_HOME/platform/systems/37_command_protocol/trigger_router.yaml`.
 
 Required behavior:
-
-- Route the phrase through `atlas/infrastructure/scripts/route_intent.py`.
-- Use `atlas/13_skills/skill_refinery/universal_skill_invocation_policy.md` and `atlas/13_skills/skill_refinery/cross_runtime_invoke_all_skills_contract.md` as authority.
-- Distinguish runtime tool-callable skills from repository-native skill playbooks.
-- Treat `atlas/13_skills/active/SKILL_*.yaml` and matching `.playbook.md` files as applicable disciplines even if they are not registered in the runtime Skill tool list.
-- Report `tool_called_skills` separately from `playbook_applied_disciplines`.
-- Suppress project-specific skills unless an explicit target/domain binds them.
-- Do not run destructive/setup/background/config-writing tools unless the user explicitly requested that exact action.
+- Use `atlas_tether.py resolve-skill` for all skill lookups (resolves from ABI)
+- Treat resolved `SKILL_*.yaml` + `.playbook.md` files as applicable disciplines
+- Suppress project-specific skills unless explicitly target-bound
 
 Forbidden behavior:
+- Do not reference paths under `atlas/`, `.claude/universal/`, `.codex/universal/`
+  (the vendored corpus has been purged; those paths are dead references)
+- Do not hardcode ATLAS internal paths — use the tether CLI exclusively
 
-- Do not say only the runtime-registered Skill tool list counts.
-- Do not ask the user to manually name every `SKILL_*` playbook.
-- Do not activate imported `.claude`, `.codex`, or `.gemini` assets as universal law unless they are promoted or target-bound.
-
-Validation gate:
+## Health Check
 
 ```bash
-python3 atlas/infrastructure/scripts/validate_trigger_determinism.py
+python3 /Users/desmondearly/Developer/ATLAS/infrastructure/scripts/atlas_tether.py doctor
 ```
+
+## Tether Configuration
+
+See `.atlas/tether.yaml` for `atlas_home`, `pinned_ref`, and `abi_version`.

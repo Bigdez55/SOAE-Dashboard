@@ -12,3 +12,8 @@ dist/
 
 # Tauri build output
 src-tauri/target/
+
+# atlas_tether: vendored corpus (replaced by thin tether)
+atlas/
+.claude/universal/
+.codex/universal/
