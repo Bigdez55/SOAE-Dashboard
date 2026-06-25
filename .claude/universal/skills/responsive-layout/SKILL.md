@@ -17,7 +17,7 @@ Mobile-first responsive dashboard layouts: CSS Grid auto-fill/auto-fit patterns,
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/responsive-layout/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `0b54349af18c98a37e1c4ad5e585e1dbf854cb74aa3da794e7f36c627277b19d`
 
 ## Activation Rule

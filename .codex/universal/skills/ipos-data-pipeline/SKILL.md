@@ -17,7 +17,7 @@ KPI data ingestion pipelines: Bronze/Silver/Gold medallion architecture, Trapeze
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/data-pipeline/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `624168f2a9b82ffaf9e2e0529297f50737379f70fe8e57b35bab25afd1de4888`
 
 ## Activation Rule

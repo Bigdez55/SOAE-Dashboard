@@ -17,7 +17,7 @@ WCAG 2.1 AA accessibility implementation for dashboards: ARIA labels, keyboard n
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/beacon/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `1eee6cd7fbd5bb86762cdb37fcc92cd6f774c3e0c3972c6073767fab86422ee6`
 
 ## Activation Rule

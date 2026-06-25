@@ -17,7 +17,7 @@ Data pipeline design for paratransit dashboards: ETL patterns, SharePoint List s
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/pipeline/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `db1e518cc0b1f29034a825c543fa4cdf444b12a80af802451b6d7738afde5742`
 
 ## Activation Rule

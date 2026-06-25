@@ -17,7 +17,7 @@ Dashboard performance optimization: React.memo and useMemo for expensive KPI cal
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/turbo/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `07f994b574373a6068e1125838d7abb874895d31b1b7df4bfc9096f69d0eb6ec`
 
 ## Activation Rule

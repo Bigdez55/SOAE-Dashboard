@@ -17,7 +17,7 @@ Python dashboard engineering with Codename JUPYTER. Covers Plotly Dash multi-pag
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/jupyter/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `8141caf12ebeb71200f8556426faf5c1ad2c527bf4c18c1a5dc0315c3748dba4`
 
 ## Activation Rule

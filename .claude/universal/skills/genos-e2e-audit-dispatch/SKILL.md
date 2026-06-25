@@ -17,7 +17,7 @@ Dispatch the full 27-agent Apex Engineering Corps for a complete end-to-end audi
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/e2e-audit-dispatch.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `33fc194e7bf8d7c0d6e9f11cdd532c76107ac263374ab3403458b3678653c4ef`
 
 ## Activation Rule

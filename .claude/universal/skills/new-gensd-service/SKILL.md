@@ -17,7 +17,7 @@ Registers a new service with the GENSD init system. Reference: `init/gensd/servi
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/new-gensd-service.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `82e00068e3b68ffd445acafa0c458108bdd61f8fc12d9dda71a29017a5650855`
 
 ## Activation Rule

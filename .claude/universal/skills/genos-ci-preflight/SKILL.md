@@ -1,6 +1,6 @@
 ---
 name: genos-ci-preflight
-description: "GEN.OS CI Pre-flight — Pre-Push Validation Checklist — Run this before every `git push`. Mirrors CI exactly. No surprises. cd /Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS python platfor"
+description: "GEN.OS CI Pre-flight — Pre-Push Validation Checklist — Run this before every `git push`. Mirrors CI exactly. No surprises. cd /Users/desmondearly/Developer/GENESYS python platfor"
 source: platform/sdlc/13_skills/active/SKILL_GENOS_CI_PREFLIGHT_001.yaml
 canonical_id: SKILL_GENOS_CI_PREFLIGHT_001
 generated: 2026-05-27
@@ -13,11 +13,11 @@ runtime: codex
 # GEN.OS CI Pre-flight — Pre-Push Validation Checklist Playbook
 
 ## Purpose
-Run this before every `git push`. Mirrors CI exactly. No surprises. cd /Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS python platform/check_language_policy.py || { echo "BLOCKED: Language policy"; exit 1; }
+Run this before every `git push`. Mirrors CI exactly. No surprises. cd /Users/desmondearly/Developer/GENESYS python platform/check_language_policy.py || { echo "BLOCKED: Language policy"; exit 1; }
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/ci-preflight.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `04a226381c8c3eb3b8bdf7422994063d2f4df11233d5dc8eeafb4cff43ae4d18`
 
 ## Activation Rule

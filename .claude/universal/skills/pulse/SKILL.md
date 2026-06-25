@@ -17,7 +17,7 @@ Real-time dashboard updates: WebSocket integration, Server-Sent Events (SSE), in
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/pulse/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `d5e8ce3bd8caf6aa85b7c5f366973023db1e515a39f42e942d6f2fa84a6ba7f2`
 
 ## Activation Rule

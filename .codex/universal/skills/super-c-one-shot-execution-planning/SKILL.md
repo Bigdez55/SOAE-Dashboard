@@ -17,7 +17,7 @@ name: one-shot-execution-planning description: > Forces deep preflight planning 
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/desmond_super_c_skills_2026-05-17/raw/claude_skills/one-shot-execution-planning/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/desmond-super-c`
+- Source repo: `/Users/desmondearly/Developer/desmond-super-c`
 - Raw SHA-256: `dbbbc04ab0f8924ee27b1a1490414c3825134badfa07c5ca0ab9868532e82c84`
 
 ## Activation Rule

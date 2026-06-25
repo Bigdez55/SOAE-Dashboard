@@ -317,7 +317,7 @@ file counts against the sovereignty score until proven otherwise).
 ## Required Checks
 
 All commands assume working directory is the repo root
-`/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/desmond-super-c/`.
+`/Users/desmondearly/Developer/desmond-super-c/`.
 Output of every check is written to the audit evidence packet under
 `atlas/08_verification/sovereignty/<ISO-date>/`.
 

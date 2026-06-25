@@ -17,7 +17,7 @@ Creates a production-ready microservice in `platform/services/[service]/`. platf
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/new-platform-service.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `26c75063833707aa55fe57c58b6c54cd67cebf114eddfcdefe6dc52b059d0a8b`
 
 ## Activation Rule

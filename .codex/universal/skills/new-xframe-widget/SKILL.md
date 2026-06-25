@@ -17,7 +17,7 @@ Creates a production-ready XFRAME widget following the exact pattern of `ui/xfra
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/new-xframe-widget.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `a4602d149a670a1b3fad10f8ff24de99662247ad00c46f6c243a769f685ee893`
 
 ## Activation Rule

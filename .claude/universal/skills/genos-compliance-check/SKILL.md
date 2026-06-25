@@ -17,7 +17,7 @@ Run before sprint close and before every PR to `main`. python platform/check_lan
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/compliance-check.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `a4279761801267da0649caecdef14170119570c689eef77fe92572d633b02aa0`
 
 ## Activation Rule

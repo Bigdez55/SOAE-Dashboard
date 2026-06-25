@@ -17,7 +17,7 @@ Build display, storage, network, AI, and sync subsystems with zero third-party d
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/desmond_super_c_skills_2026-05-17/raw/claude_skills/subsystems-from-scratch/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/desmond-super-c`
+- Source repo: `/Users/desmondearly/Developer/desmond-super-c`
 - Raw SHA-256: `4a79d0308741aa8cf5e7ac401a668be39887fe4981a5e00fb9e0e0e49b7ea84d`
 
 ## Activation Rule

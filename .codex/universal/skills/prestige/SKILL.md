@@ -17,7 +17,7 @@ Dashboard UI/UX design systems for paratransit dashboards: Transdev brand guidel
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/prestige/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `8937709aff2e3c8f099e4a0198eb5d1c6bc7e0d3bc6dd16317289859de627232`
 
 ## Activation Rule

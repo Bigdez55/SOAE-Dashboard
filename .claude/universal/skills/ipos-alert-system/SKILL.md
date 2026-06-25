@@ -17,7 +17,7 @@ Threshold-based alert system: penalty warnings, KPI degradation alerts, anomaly 
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/alert-system/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `2ccd27c67df213bcefd2a0ef31b760155951b729109d33342d45bd6018371322`
 
 ## Activation Rule

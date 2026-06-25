@@ -17,7 +17,7 @@ Diagnose and recover from XSTORE write-ahead log (WAL) failures in GEN.OS. - `xs
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/wal-debug.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `8733452942f1be8120df2583ad68c5e118552985828921b22fa089ad142dd81d`
 
 ## Activation Rule

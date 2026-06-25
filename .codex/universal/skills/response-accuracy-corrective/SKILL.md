@@ -17,7 +17,7 @@ Self-correcting accuracy protocol. Invoke before any audit/inventory/"find every
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genesys_claude_delta_skills_2026-05-17/raw/response-accuracy-corrective/SKILL.md`
-- Original source: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS/.claude/skills/response-accuracy-corrective.md`
+- Original source: `/Users/desmondearly/Developer/GENESYS/.claude/skills/response-accuracy-corrective.md`
 - Raw SHA-256: `e03acfab7ffa1738b9cae61715bc43865519860007a0903bf324d37d05f281ca`
 
 ## Activation Rule

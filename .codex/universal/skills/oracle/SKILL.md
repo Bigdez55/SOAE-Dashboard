@@ -17,7 +17,7 @@ Integrating AI and ML capabilities into dashboards: Claude API streaming respons
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/oracle/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `4ed5136659a2d85c0eb4159bcf4c44d549cb6886d747cda8074d2f9ba0869b9c`
 
 ## Activation Rule

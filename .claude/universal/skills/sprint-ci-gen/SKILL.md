@@ -17,7 +17,7 @@ Generate a new GitHub Actions workflow for a GEN.OS sprint, following the canoni
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/sprint-ci-gen.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `de67a33aec2b52300028f4deeec1a1fc7b7a1f893eb850934b2ff362e3df758e`
 
 ## Activation Rule

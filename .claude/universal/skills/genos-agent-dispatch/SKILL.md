@@ -17,7 +17,7 @@ How to assign the Apex Engineering Corps to complex tasks. the-architect -> apex
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/agent-dispatch.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `b164137f4f4b24fb3987861eab90d774c21453a8431a9acdac693ecd9c7ea65b`
 
 ## Activation Rule

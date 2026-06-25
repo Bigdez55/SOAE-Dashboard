@@ -17,7 +17,7 @@ XPKG is the GEN.OS package manager. Manages signed package install/remove/update
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/sprint3-xpkg.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `8b46651982e10ecc54a4ef42620e5a9f5915672c2c7943f1ad09370c2cd894bb`
 
 ## Activation Rule

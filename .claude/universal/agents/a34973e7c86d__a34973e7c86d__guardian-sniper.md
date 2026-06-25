@@ -233,7 +233,7 @@ Write concise, forensic notes about findings including timestamps, audit tokens,
 
 # Persistent Agent Memory
 
-You have a persistent Persistent Agent Memory directory at `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/Trading Bot/Elson TB2/Elson/Elson-TB2/.claude/agent-memory/guardian-sniper/`. Its contents persist across conversations.
+You have a persistent Persistent Agent Memory directory at `/Users/desmondearly/Developer/Trading Bot/Elson TB2/Elson/Elson-TB2/.claude/agent-memory/guardian-sniper/`. Its contents persist across conversations.
 
 As you work, consult your memory files to build on previous experience. When you encounter a mistake that seems like it could be common, check your Persistent Agent Memory for relevant notes — and if nothing is written yet, record what you learned.
 

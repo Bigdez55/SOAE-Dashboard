@@ -17,7 +17,7 @@ Sprint N Goal: [One sentence — what system capability is added] Build Phases a
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/sprint-kickoff.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `0aeacdc77497bce2d6dbf64b4c7340d82addac8eb685bea22ee994f8129bb815`
 
 ## Activation Rule

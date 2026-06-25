@@ -17,7 +17,7 @@ Implement production crypto and security hardening without third-party libraries
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/desmond_super_c_skills_2026-05-17/raw/claude_skills/security-crypto-engineering/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/desmond-super-c`
+- Source repo: `/Users/desmondearly/Developer/desmond-super-c`
 - Raw SHA-256: `454489e133322ff1aa1d9683462da4572365dcda5a2045f22d9e607619d2e934`
 
 ## Activation Rule

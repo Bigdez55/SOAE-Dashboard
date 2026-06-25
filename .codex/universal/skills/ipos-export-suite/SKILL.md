@@ -17,7 +17,7 @@ Complete export capability: PDF generation (jsPDF + html2canvas), Excel workbook
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/export-suite/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `ff4077abddaa65e53d8d9ed15bf94ce3bec26667d60696f2644e3b99eccfbbdd`
 
 ## Activation Rule

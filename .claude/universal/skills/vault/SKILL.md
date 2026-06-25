@@ -17,7 +17,7 @@ Enterprise deployment patterns for SharePoint and Microsoft 365: SPFx tenant-wid
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/vault/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `6ae9c133688c95cce78adb452d8b7a3db872ccbb549c44f0aa7f2b2f23413a69`
 
 ## Activation Rule

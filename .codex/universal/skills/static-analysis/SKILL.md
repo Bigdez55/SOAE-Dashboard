@@ -17,7 +17,7 @@ Run before every PR. Zero tolerance: 0 warnings, 0 violations, 0 CVEs. cppcheck 
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/static-analysis.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `892a0453e0c750425d73f09968e1bc53c200dd02752120a8872f35fd6fe9f689`
 
 ## Activation Rule

@@ -17,7 +17,7 @@ Svelte 5 and SvelteKit dashboard engineering with Codename VELOCITY. Covers Svel
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/velocity/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `5d3d3f04817febe4fec22cdbaaaed6300d99cae6869a73a152ec7144566ae904`
 
 ## Activation Rule

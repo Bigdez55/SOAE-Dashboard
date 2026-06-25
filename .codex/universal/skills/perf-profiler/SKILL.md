@@ -17,7 +17,7 @@ Dashboard performance profiling and optimization: Core Web Vitals targets (LCP <
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/perf-profiler/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `5859b59ee47610c694e8043eccb694f856b16fa1174c992199dd8071a1a48b48`
 
 ## Activation Rule

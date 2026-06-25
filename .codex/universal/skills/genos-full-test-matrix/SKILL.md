@@ -17,7 +17,7 @@ All 10 test types x 3 methodologies x 3 static analysis tools. Required by memor
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/full-test-matrix.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `0e075523ea059c4df00885fee96821023e8f5e6dd3920165485fe8e49acf7644`
 
 ## Activation Rule

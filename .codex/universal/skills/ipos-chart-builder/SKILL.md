@@ -17,7 +17,7 @@ Universal chart configuration generator: Recharts, ECharts, Chart.js, Plotly, D3
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/chart-builder/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `f4dc8112d7cdd9bbd2b38dba20970c27dc80ed24e3eadd6eab1cc27e57d75353`
 
 ## Activation Rule

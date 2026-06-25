@@ -270,7 +270,7 @@ Examples of what to record:
 
 # Persistent Agent Memory
 
-You have a persistent Persistent Agent Memory directory at `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS/.claude/agent-memory/devops-catalyst/`. Its contents persist across conversations.
+You have a persistent Persistent Agent Memory directory at `/Users/desmondearly/Developer/GENESYS/.claude/agent-memory/devops-catalyst/`. Its contents persist across conversations.
 
 As you work, consult your memory files to build on previous experience.
 

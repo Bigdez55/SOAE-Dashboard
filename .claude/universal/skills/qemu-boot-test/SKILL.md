@@ -17,7 +17,7 @@ Boot and verify GEN.OS in QEMU before flashing to HP EliteBook x360 hardware. - 
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/qemu-boot-test.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `34c091a0c8c60eed8e7e7a54bd6bcac8ad209d0524a84e3c962cbfca5351f2aa`
 
 ## Activation Rule

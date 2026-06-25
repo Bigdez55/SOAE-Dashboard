@@ -17,7 +17,7 @@ Add a new XKABI capability right to the GEN.OS security model. Reference: `kerne
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/xkabi-capability.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `f3906019a851de32d4205555b0298ccd9b7d0e8dd0cd104322cfb4191cb7342c`
 
 ## Activation Rule

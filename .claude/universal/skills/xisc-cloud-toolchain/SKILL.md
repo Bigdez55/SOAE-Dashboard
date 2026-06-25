@@ -17,7 +17,7 @@ Process runtime, binary translation, cloud microservices, custom compiler, and p
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/desmond_super_c_skills_2026-05-17/raw/claude_skills/xisc-cloud-toolchain/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/desmond-super-c`
+- Source repo: `/Users/desmondearly/Developer/desmond-super-c`
 - Raw SHA-256: `527a906b9d41eb73e1085b088892840fcb5fd3482c84c68c5584f9f70a58e435`
 
 ## Activation Rule

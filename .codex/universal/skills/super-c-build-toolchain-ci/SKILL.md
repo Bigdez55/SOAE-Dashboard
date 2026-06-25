@@ -17,7 +17,7 @@ Master the GEN.OS compilation pipeline, Docker toolchain, and CI gates. PCH_NOSS
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/desmond_super_c_skills_2026-05-17/raw/claude_skills/build-toolchain-ci/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/desmond-super-c`
+- Source repo: `/Users/desmondearly/Developer/desmond-super-c`
 - Raw SHA-256: `40230e0742cc0fda31f9a6b131f8d6ae128a74ffef95a0c671b430d10100dd77`
 
 ## Activation Rule

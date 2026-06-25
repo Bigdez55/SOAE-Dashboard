@@ -17,7 +17,7 @@ Use this skill when the user wants to design, scaffold, or code a SharePoint Fra
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/spfx-dashboard-builder/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `8dd994a3c6c9c73b5dafe728ccaede4c9f2be5ac6748467ef51770aca5796682`
 
 ## Activation Rule

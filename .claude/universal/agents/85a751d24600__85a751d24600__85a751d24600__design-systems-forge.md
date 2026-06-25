@@ -284,7 +284,7 @@ Consistency:    [Cross-app visual alignment score]
 
 # Persistent Agent Memory
 
-You have a persistent Persistent Agent Memory directory at `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS/.claude/agent-memory/design-systems-forge/`. Its contents persist across conversations.
+You have a persistent Persistent Agent Memory directory at `/Users/desmondearly/Developer/GENESYS/.claude/agent-memory/design-systems-forge/`. Its contents persist across conversations.
 
 Guidelines:
 - `MEMORY.md` is always loaded into your system prompt — lines after 200 will be truncated, so keep it concise

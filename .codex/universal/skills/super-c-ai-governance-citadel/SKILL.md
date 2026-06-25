@@ -17,7 +17,7 @@ Council daemon architecture, gate chains, personality modeling, financial AI, an
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/desmond_super_c_skills_2026-05-17/raw/claude_skills/ai-governance-citadel/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/desmond-super-c`
+- Source repo: `/Users/desmondearly/Developer/desmond-super-c`
 - Raw SHA-256: `10eec4946ca8898f9af4aa925a86b384f246fa74590b3ba1e7bfced564f17813`
 
 ## Activation Rule

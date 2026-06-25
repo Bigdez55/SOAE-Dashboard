@@ -24,7 +24,7 @@ Discover, preserve, classify, and normalize Codex/Gemini assistant surfaces acro
 - User asks to acquire missing Codex/Gemini skills, agents, prompts, commands, memories, or support files.
 
 ## Hard Constraints
-- Default search roots are `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal` and `/Users/desmondearly/Documents/GitHub`.
+- Default search roots are `/Users/desmondearly/Developer` and `/Users/desmondearly/Documents/GitHub`.
 - Do not scan `~/.codex`, `~/.gemini`, `Downloads`, or unrelated home directories unless the user explicitly expands scope.
 - Preserve safe raw text. Index binary, sensitive, cache, token, session, and state files without copying their contents.
 - Separate acquisition evidence from operational imports and registry/router wiring.

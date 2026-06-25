@@ -17,7 +17,7 @@ Hard constraint: Python, TypeScript, C ONLY. Enforced by `platform/check_languag
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/language-gate.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `f4c0f2196a0a00950855494eae75175b6f925390335b56e20d867fc7fd90d840`
 
 ## Activation Rule

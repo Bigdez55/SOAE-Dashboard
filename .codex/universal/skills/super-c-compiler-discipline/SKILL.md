@@ -17,7 +17,7 @@ Empirical discipline for evolving the SUPER C v1 self-hosted compiler (seedc →
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/desmond_super_c_skills_2026-05-17/raw/claude_skills/compiler-discipline/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/desmond-super-c`
+- Source repo: `/Users/desmondearly/Developer/desmond-super-c`
 - Raw SHA-256: `4e26cb412cd0141325a8dbded6001b59ea447cff60b4536b42e8c5615d581f1a`
 
 ## Activation Rule

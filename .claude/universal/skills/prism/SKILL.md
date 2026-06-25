@@ -17,7 +17,7 @@ React 18+ / Next.js 14+ dashboard engineering with Codename PRISM. Covers Rechar
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/prism/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `7aeb7dc174a5d94cd0c4aa7961d31ad99e0d5713309ed1994ba2f41caeb21760`
 
 ## Activation Rule

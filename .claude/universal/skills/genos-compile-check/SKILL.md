@@ -17,7 +17,7 @@ Run the full compile-check suite locally on macOS. Mirror of CI xenos.yml + disp
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/compile-check.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `6424d7724fe4032790944c4cd0728ad0cacbfcbc2dfb992c945e454b6bc0579f`
 
 ## Activation Rule

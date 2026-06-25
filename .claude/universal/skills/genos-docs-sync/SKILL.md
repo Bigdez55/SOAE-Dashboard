@@ -17,7 +17,7 @@ Run after every sprint or major feature. Prevents tribal knowledge loss. Each in
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/docs-sync.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `45eb04d1df2bef317e2730eba83337a5040eafd3c36516b6077fc7d916766af8`
 
 ## Activation Rule

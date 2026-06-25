@@ -17,7 +17,7 @@ Design system generator: CSS custom properties token system (colors, spacing, ty
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/theme-engine/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `85bfd66a8ff8558726b8b6cb72b39d686672ba97900df61932b10305a710d6d4`
 
 ## Activation Rule

@@ -17,7 +17,7 @@ KPI card component factory: status indicators (Critical/Warning/On Target/Incent
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/kpi-card-factory/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `c62ec6aee12c720a6fed6cb0ba284975f10010d625b3affc5fcb4817ed76f4fb`
 
 ## Activation Rule

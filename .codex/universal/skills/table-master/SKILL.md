@@ -17,7 +17,7 @@ Advanced data table patterns: TanStack Table v8, Fluent UI DetailsList, AG Grid.
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/table-master/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `7cb9687a89f323f169ea47185b42886cfabc8351c61ae9d18f08b25209bdd121`
 
 ## Activation Rule

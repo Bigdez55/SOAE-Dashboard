@@ -17,7 +17,7 @@ For every IPC/D-Bus interface or REST endpoint that crosses a service boundary. 
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/api-contract.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `783c1e7e706e467cc387318df2a097a307b9780cbb75200809669b162b9d1a16`
 
 ## Activation Rule

@@ -17,7 +17,7 @@ Run with `guardian-sentinel` + `reliability-security-sentinel` agents. Classify 
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/security-audit.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `9b57b883a25d70567aa98e9a66615e062af4258ccebf37296334c883e84ddc3a`
 
 ## Activation Rule

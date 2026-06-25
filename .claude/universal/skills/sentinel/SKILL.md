@@ -17,7 +17,7 @@ Dashboard testing strategies: Jest unit tests for KPI calculators and contract c
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/sentinel/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `b7120e541d63fb3f06f534004be5567ed7f6512f04b36a4503046b74138c8c17`
 
 ## Activation Rule

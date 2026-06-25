@@ -17,7 +17,7 @@ Universal dashboard scaffolding skill: generates complete project structures for
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/dashboard-scaffold/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `689e46afb7644bce70ac35146614b021ec26f2e9d71113c328c5eba7cd7e0eb3`
 
 ## Activation Rule

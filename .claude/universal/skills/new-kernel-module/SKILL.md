@@ -17,7 +17,7 @@ Creates a production-ready freestanding C kernel module following the exact patt
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/new-kernel-module.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `6d0250c5ed49cc99edb3acba11ab3bf0e7c396572b89087f1b50485a3a630fea`
 
 ## Activation Rule

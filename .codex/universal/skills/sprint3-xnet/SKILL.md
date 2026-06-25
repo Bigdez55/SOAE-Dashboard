@@ -17,7 +17,7 @@ XNET is the zero-copy, freestanding network stack for GEN.OS. Target: Sprint 3. 
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/sprint3-xnet.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `7b104ec5ee7e1a474d8736abe6e7ddf8b8ae47951db0e941d215f6406badd650`
 
 ## Activation Rule

@@ -17,7 +17,7 @@ Build phases 0-9. Run on Ubuntu build host (Linux required for debootstrap). Ref
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/iso-build.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `82fad311b4ae9276c87a4eac42984b7c8c7a053375e8e8da2e08fb0a74fb6fb9`
 
 ## Activation Rule

@@ -17,7 +17,7 @@ Debug XENOS kernel panics, boot failures, and ISR faults. sudo apt-get install q
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/kernel-debug.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `86a9976bbf4c4d6a716c1812d912650ddf949fdc35c17b44ba0c2f13b56841f0`
 
 ## Activation Rule

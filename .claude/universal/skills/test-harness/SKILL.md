@@ -17,7 +17,7 @@ Comprehensive test harness for KPI dashboards: Jest/Vitest configuration with ts
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/test-harness/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `486126cf55adb5780170dbdde286c0a5d71bdda1844df197f13cc755ee847636`
 
 ## Activation Rule

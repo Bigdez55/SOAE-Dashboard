@@ -17,7 +17,7 @@ Build a bare-metal x86-64 kernel with zero libc dependency. Every kernel .c file
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/desmond_super_c_skills_2026-05-17/raw/claude_skills/freestanding-c-kernel/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/desmond-super-c`
+- Source repo: `/Users/desmondearly/Developer/desmond-super-c`
 - Raw SHA-256: `141f79b339c7da675a423fcb7361a089ba3aa6ba5b2fe898e45399bbc0acc21d`
 
 ## Activation Rule

@@ -17,7 +17,7 @@ AI-powered KPI analysis and recommendation engine: performance health scoring (0
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/ai-insights/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `1750dbc0269c7e571e02cddf4ce62c0464378e0510763944e7a65e6c933a26b0`
 
 ## Activation Rule

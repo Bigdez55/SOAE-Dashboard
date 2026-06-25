@@ -17,7 +17,7 @@ CI/CD deployment pipelines for KPI dashboards: GitHub Actions workflows for GitH
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/deploy-pipeline/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `3075ba0661a9f014afab4f56df7fda61455a051c3daf969f509d7ed18fed7d15`
 
 ## Activation Rule

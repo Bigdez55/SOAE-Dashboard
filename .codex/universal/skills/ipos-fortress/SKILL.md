@@ -17,7 +17,7 @@ Angular 17+ dashboard engineering with Codename FORTRESS. Covers NgRx state mana
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/fortress/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `eb4aa2225cee55bafeca1d9d385331f1e76e10c053dc91ac422727eaace6bbdc`
 
 ## Activation Rule

@@ -17,7 +17,7 @@ Write and run fuzz test harnesses for GEN.OS freestanding C modules. - After imp
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/fuzz-module.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `b02bb36abea0eec4b23253e420a60d496ed6482371286c464ea1d59ab3c8dcd6`
 
 ## Activation Rule

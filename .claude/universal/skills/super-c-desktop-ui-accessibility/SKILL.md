@@ -17,7 +17,7 @@ Electron compositor, design system, accessibility, desktop apps, JIT compiler. `
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/desmond_super_c_skills_2026-05-17/raw/claude_skills/desktop-ui-accessibility/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/desmond-super-c`
+- Source repo: `/Users/desmondearly/Developer/desmond-super-c`
 - Raw SHA-256: `964c3da1b52665b45bc6caffb798706a9a9154459035109cd1eba8ee10333d28`
 
 ## Activation Rule

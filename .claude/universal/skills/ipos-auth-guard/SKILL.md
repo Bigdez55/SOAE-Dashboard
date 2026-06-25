@@ -17,7 +17,7 @@ Authentication and authorization patterns for dashboards: JWT (access + refresh 
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/auth-guard/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `9750775a022ccb961bf480bbe919a9efb27740b3c95b1822f98542d061a5449f`
 
 ## Activation Rule

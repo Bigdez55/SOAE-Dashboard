@@ -17,7 +17,7 @@ Run after sprint close commit. Output saved to agent memory. SPRINT N RETROSPECT
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/sprint-retro.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `175243563d7e397f7d77e8f1c9962d918d6679fc4892d3d9aa6e06813ab1434e`
 
 ## Activation Rule

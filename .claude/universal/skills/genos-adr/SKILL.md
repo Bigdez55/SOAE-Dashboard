@@ -17,7 +17,7 @@ File: `docs/adr/ADR-[NNN]-[kebab-title].md` Number sequentially from 001. Do not
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/adr.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `1d16b1b543ee4334fe0f0e991b94825f71c6b67b5c34c954a1aa0d28911fcf1c`
 
 ## Activation Rule

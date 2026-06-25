@@ -8,7 +8,7 @@ This file provides reusable tools, scripts, and validation commands that agents 
 
 ### Build Project
 ```bash
-cd /Users/desmondearly/Library/CloudStorage/OneDrive-Personal/Apollo16-main
+cd /Users/desmondearly/Developer/Apollo16-main
 xcodebuild -scheme Apollo16 build
 ```
 
@@ -106,12 +106,12 @@ grep -rn "TODO\|FIXME\|HACK\|XXX" Apollo16/ --include="*.swift"
 
 ### Check Uncommitted Changes
 ```bash
-git -C /Users/desmondearly/Library/CloudStorage/OneDrive-Personal/Apollo16-main status
+git -C /Users/desmondearly/Developer/Apollo16-main status
 ```
 
 ### Stage Changes
 ```bash
-cd /Users/desmondearly/Library/CloudStorage/OneDrive-Personal/Apollo16-main
+cd /Users/desmondearly/Developer/Apollo16-main
 git add Apollo16/MODELS/Song.swift
 git add Apollo16/MODELS/Note.swift
 # ... add other modified files
@@ -155,7 +155,7 @@ pod --version
 
 ### Install Pods
 ```bash
-cd /Users/desmondearly/Library/CloudStorage/OneDrive-Personal/Apollo16-main
+cd /Users/desmondearly/Developer/Apollo16-main
 rm -rf Pods/ Podfile.lock
 pod install --verbose
 ```
@@ -185,7 +185,7 @@ xcodebuild -scheme Apollo16 -enableAddressSanitizer YES test
 ```bash
 # Build and run with Instruments
 xcodebuild -scheme Apollo16 build
-open /Users/desmondearly/Library/CloudStorage/OneDrive-Personal/Apollo16-main/build/Release-iphoneos/Apollo16.app
+open /Users/desmondearly/Developer/Apollo16-main/build/Release-iphoneos/Apollo16.app
 # Use Xcode → Debug → Profiler → Time Profiler
 ```
 

@@ -17,7 +17,7 @@ XSEC is the cryptographic and attestation layer for GEN.OS. Depends on: TPM (aet
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/sprint3-xsec.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `89001a3cc73bbcf70b2e0757f80084b4d3bcd442f34955e6a49cc10053c6ef36`
 
 ## Activation Rule

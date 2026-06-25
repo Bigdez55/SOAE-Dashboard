@@ -17,7 +17,7 @@ Vue 3 / Nuxt 3 dashboard engineering with Codename MOSAIC. Covers Composition AP
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/mosaic/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `c0071c6f51caf82643ad0703149bcccd845d1c7f97593ae975f2c5474b83a4a5`
 
 ## Activation Rule

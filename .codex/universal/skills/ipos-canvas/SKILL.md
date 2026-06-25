@@ -17,7 +17,7 @@ Custom D3.js visualizations with Codename CANVAS. Low-level SVG and Canvas rende
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/canvas/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `cc384c45841211e8332f68b86574bf3d7a25ce2e65d376978b1ac717309b1a9a`
 
 ## Activation Rule

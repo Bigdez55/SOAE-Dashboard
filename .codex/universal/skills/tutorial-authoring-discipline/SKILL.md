@@ -17,7 +17,7 @@ A binding skill for any agent authoring or expanding content under `docs/tutoria
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/desmond_super_c_skills_2026-05-17/raw/claude_skills/tutorial-authoring-discipline/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/desmond-super-c`
+- Source repo: `/Users/desmondearly/Developer/desmond-super-c`
 - Raw SHA-256: `253eebbdbb25c11a9b8a1e9e94450ac650ea9232581599c38675fb18c81d80d8`
 
 ## Activation Rule

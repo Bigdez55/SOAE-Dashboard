@@ -17,7 +17,7 @@ Run at sprint close after all gates pass. python platform/check_language_policy.
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/release-prep.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `2bd81d48250c18befcede7227351ea926b627180eb8f5d864adbfcec46d2aabb`
 
 ## Activation Rule

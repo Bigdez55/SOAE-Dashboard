@@ -17,7 +17,7 @@ Verify XMIND inference correctness: tensor math, Q4_0 dequantization, transforme
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/xmind-test.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `e96716d5ff9e9855de791a9b7c7fe057f53360ccefd732906733a6c3311c9b82`
 
 ## Activation Rule

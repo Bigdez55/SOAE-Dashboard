@@ -17,7 +17,7 @@ Verify hardware driver correctness for the HP EliteBook x360 target (Sprint 7-9 
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/genos_codex_skills_2026-05-17/raw/hw-driver-verify.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/GENESYS/GENESYS`
+- Source repo: `/Users/desmondearly/Developer/GENESYS`
 - Raw SHA-256: `51ef7fe3802232e99e2c19c6f7a0d2af082aae82b937c09826729f591cc70c46`
 
 ## Activation Rule

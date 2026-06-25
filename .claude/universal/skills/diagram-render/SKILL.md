@@ -54,7 +54,7 @@ mmdc --version
 ```
 
 **OneDrive path note:** All paths passed to `mmdc` MUST be quoted with double-quotes.
-OneDrive paths contain spaces (e.g. `OneDrive-Personal`) that will break unquoted shell
+OneDrive paths contain spaces (e.g. `Developer`) that will break unquoted shell
 arguments. Always use:
 ```bash
 mmdc -i "<input_path>" -o "<output_path>"

@@ -17,7 +17,7 @@ Data export systems for dashboards: PDF generation using jsPDF and html2canvas, 
 
 ## Imported Source
 - Raw source: `16_knowledge/external_collateral/ipos_claude_skills_2026-05-17/raw/courier/SKILL.md`
-- Source repo: `/Users/desmondearly/Library/CloudStorage/OneDrive-Personal/IPOS/IPOS`
+- Source repo: `/Users/desmondearly/Developer/IPOS`
 - Raw SHA-256: `dc5faf24bfccde70c6fa5cac964289d7ff8e51b36765d1725f68a27d439e67da`
 
 ## Activation Rule
