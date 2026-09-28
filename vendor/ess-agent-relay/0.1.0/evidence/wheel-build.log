@@ -1,0 +1,10 @@
+WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Processing /mnt/data/Agent_Relay_Install_Package_2026-09-28
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: ess-agent-relay
+  Building wheel for ess-agent-relay (pyproject.toml): started
+  Building wheel for ess-agent-relay (pyproject.toml): finished with status 'done'
+  Created wheel for ess-agent-relay: filename=ess_agent_relay-0.1.0-py3-none-any.whl size=46293 sha256=8bce0915a5ef3ebc8be0cf7ebf2b7c1483ea1c82e790bafaafcb03315b48a4bf
+  Stored in directory: /tmp/pip-ephem-wheel-cache-vh8pb1fm/wheels/72/30/04/fe130d9e8be29ab97357caadf885f49fc70e5b4d53bade8069
+Successfully built ess-agent-relay
