@@ -18,7 +18,7 @@ atlas/
 .claude/universal/
 .codex/universal/
 
-# ESS Agent Relay — local runtime state (vendored package lives under vendor/ess-agent-relay/)
+# Agent Relay — local runtime state (vendored package lives under vendor/agent-relay/)
 .relay/
 relay.sock
 owner.key
